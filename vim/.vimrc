@@ -5,6 +5,8 @@ if has("termguicolors")
     set termguicolors
 endif
 
+colorscheme retrobox
+
 " Load plugins
 packadd! editorconfig
 packadd comment
@@ -30,15 +32,25 @@ set noswapfile
 set cursorline
 set cursorlineopt=both
 
-" setup colors for highlight groups
-hi Normal guibg=#1a1b26
-hi LineNr term=underline ctermfg=11 guifg=#414868
-hi Visual ctermbg=white ctermfg=0 
-hi CursorLine term=NONE cterm=NONE ctermbg=242 guibg=#2d3247
-hi CursorLineNr term=bold cterm=NONE ctermfg=11 gui=bold guifg=#ed9618
-
 set tabstop=4
 set shiftwidth=4
 
 " Search
 set hlsearch
+
+
+" setup colors for highlight groups
+" hi Normal guibg=#1a1b26
+" hi LineNr term=underline ctermfg=11 guifg=#414868
+" hi Visual ctermbg=white ctermfg=0 
+" hi CursorLine term=NONE cterm=NONE ctermbg=242 guibg=#2d3247
+" hi CursorLineNr term=bold cterm=NONE ctermfg=11 gui=bold guifg=#ed9618
+" hi NonText term=bold ctermfg=12 gui=bold guifg=#414868
+" hi Comment ctermfg=14 guifg=#565f89
+
+" setup colors for man page
+" hi Title term=bold ctermfg=225 gui=bold guifg=#bb9af7
+" hi Statement term=bold ctermfg=11 gui=bold guifg=#e0af68
+" hi Type term=underline ctermfg=121 gui=bold guifg=#9ece6a
+" hi Identifier term=underline cterm=bold ctermfg=14 guifg=#7dcfff
+
