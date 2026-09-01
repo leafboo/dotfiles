@@ -27,6 +27,8 @@ set number
 set nowrap
 set expandtab
 set noswapfile
+set noautoindent
+set laststatus=2
 
 " setup cursor line
 set cursorline
@@ -38,6 +40,18 @@ set shiftwidth=4
 " Search
 set hlsearch
 
+" For the :find command
+set path+=**
+" ctags
+" NOTE: make a map to execute this when doing a :w*
+command MakeTags !ctags -R .
+" nnoremap :w MakeTags
+" nnoremap :wall MakeTags
+" nnoremap :wq MakeTags
+" nnoremap :wqall MakeTags
+
+" autocmd BufWritePost * silent MakeTags
+" TODO: make an autocmd to add a trailing whitespace at the end of the file
 
 " setup colors for highlight groups
 " hi Normal guibg=#1a1b26
@@ -53,4 +67,5 @@ set hlsearch
 " hi Statement term=bold ctermfg=11 gui=bold guifg=#e0af68
 " hi Type term=underline ctermfg=121 gui=bold guifg=#9ece6a
 " hi Identifier term=underline cterm=bold ctermfg=14 guifg=#7dcfff
+
 
